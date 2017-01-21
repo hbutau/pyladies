@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'bootstrap3',
     'autoslug',
     'pyladies_harare',
+    'talks',
+    'markitup',
 ]
 
 MIDDLEWARE = [
@@ -75,7 +77,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 WSGI_APPLICATION = 'harare.wsgi.application'
 
-
+MARKITUP_FILTER = ('markdown.markdown', {'safe_mode': True})
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 

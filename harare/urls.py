@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from pyladies_harare import views
+from django.conf.urls import include, url
 
 
 urlpatterns = [
@@ -31,4 +32,5 @@ urlpatterns = [
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'signup', views.SignupView.as_view(), name='signup'),
+    url(r'^', include('talks.urls', namespace = 'talks')),
 ]
