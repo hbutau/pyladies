@@ -16,7 +16,7 @@ class Talk_Type(models.Model):
 
 class Proposal(models.Model):
 
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=1024)
     abstract = MarkupField(help_text="Describe what your talk is about")
     talk_type = models.ForeignKey(Talk_Type)
 

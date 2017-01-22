@@ -2,8 +2,9 @@ from django.shortcuts import render
 from django.views.generic import (CreateView, TemplateView)
 from talks.models import (Talk_Type, Proposal)
 from talks.forms import ProposalForm
+from .mixins import LoginRequiredMixin
 
-class CreateTalk(CreateView):
+class CreateTalk(LoginRequiredMixin, CreateView):
     model = Proposal
     form_class = ProposalForm
     template_name = "talks/talk_form.html"
