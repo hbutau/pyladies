@@ -21,7 +21,7 @@ class Proposal(models.Model):
     abstract = MarkupField(help_text="Describe what your talk is about")
     talk_type = models.ForeignKey(Talk_Type)
     talk_id = models.AutoField(primary_key=True)
-
+    # meetup = models.ForeignKey()
     def __str__(self):
         return self.title
 

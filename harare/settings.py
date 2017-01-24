@@ -37,12 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # third_party_apps
     'crispy_forms',
     'bootstrap3',
+    'markitup',
     'autoslug',
+    # my_apps
     'pyladies_harare',
     'talks',
-    'markitup',
 ]
 
 MIDDLEWARE = [
@@ -88,6 +90,7 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'auth.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
