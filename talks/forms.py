@@ -18,6 +18,7 @@ class ProposalForm(forms.ModelForm):
             'abstract': MarkItUpWidget(),
           }
 
+
     def __init__(self, *args, **kwargs):
         super(ProposalForm, self).__init__(*args, **kwargs)
 

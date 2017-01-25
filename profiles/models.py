@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Profile(models.Model):
-    user = models.OnetoOneField(User)
+    user = models.OneToOneField(User)
     bio = models.TextField(max_length=600)
     phone_number = models.CharField(max_length=16)
     home_page = models.CharField(max_length=255)
