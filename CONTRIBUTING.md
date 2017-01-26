@@ -1,5 +1,5 @@
 ### Setup your pyladies Github Repository
-Fork [pyladieshre upstream](https://github.com/pyladieshre/pyladies.git/fork) source repository to your own personal repository.
+Fork [pyladieshre upstream](https://github.com/pyladieshre/pyladies.git) source repository to your own personal repository.
 
 ```sh
 $ git clone https://github.com/$USER_ID/pyladies
