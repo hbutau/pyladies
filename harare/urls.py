@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from pyladies_harare import views
 from django.conf.urls import include, url
+import accounts.urls
 
 
 urlpatterns = [
@@ -29,8 +30,6 @@ urlpatterns = [
     url(r'past', views.PastMeetupsView.as_view(), name='past'),
     url(r'^post/(?P<pk>\d+)/$', views.PostDetailView.as_view(), name='post_detail'),
     url(r'contact', views.ContactView.as_view(), name='contact'),
-    url(r'^login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout, name='logout'),
-    url(r'signup', views.SignupView.as_view(), name='signup'),
     url(r'^', include('talks.urls', namespace = 'talks')),
+    url(r'^', include(accounts.urls, namespace='accounts')),
 ]
