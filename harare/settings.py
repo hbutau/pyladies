@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'pyladies_harare',
     'talks',
     'profiles',
+    'accounts',
 ]
 
 MIDDLEWARE = [

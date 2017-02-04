@@ -4,6 +4,7 @@ from django.views.generic import (
     CreateView,
     TemplateView,
     DetailView,
+    ListView,
 )
 from talks.models import (Talk_Type, Proposal)
 from talks.forms import ProposalForm
@@ -50,3 +51,8 @@ class TalkView(DetailView):
         context = super(TalkView, self).get_contex_data(**kwargs)
         return context
 
+
+class TalkList(ListView):
+    model = Proposal
+    template_name = "talks/talk_list.html"
+    
