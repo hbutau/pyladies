@@ -80,7 +80,7 @@
                 <div class = "dropdown"><button class="dropbtn">Hello {{ user.username }}!</button>
                     <div class="dropdown-content">
                         <a href="">Profile</a>
-                        <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                        <a href="{% url 'accounts:logout' %}">Log Out</a>
                     </div>
                 </div>
 

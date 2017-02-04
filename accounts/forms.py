@@ -28,3 +28,5 @@ class LoginForm(AuthenticationForm):
             ButtonHolder(
                 Submit('login', 'Login', css_class='btn-primary'))
         )
+
+
