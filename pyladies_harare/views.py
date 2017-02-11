@@ -122,7 +122,7 @@ class LoginView(TemplateView):
 
 
 class SignupView(TemplateView):
-    template_name = "account/signup.html"
+    template_name = "registration/signup.html"
 
     def get_context_data(self, **kwargs):
         context = super(SignupView, self).get_context_data(**kwargs)
